@@ -12,7 +12,7 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>Software Engineer ( Web ) || JavaScript • Typescript • Authentication • MongoDB</p>
+        <p className='text-neutral'>Software Engineer ( Web ) || JavaScript • Typescript • Authentication • MongoDB</p>
         <p>
           <a href="https://portfolio-18049.web.app/"> Previous Portfolio </a>
         </p>
