@@ -1,11 +1,9 @@
 import Footer from "./Footer";
 import Nav from "./Nav";
-// import Nav from "./Nav";
-
 
 const Layout = ({ children }) => {
     return (
-        <div>
+        <div className="bg-primary">
             <Nav />
             {children}
             <Footer />
