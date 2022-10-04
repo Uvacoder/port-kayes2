@@ -1,34 +1,41 @@
-import Typical from 'react-typical'
-import "./Banner.module.scss";
+import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Image from 'next/image';
+import Profile from '../../../public/images/profile.jpg';
+import Check from "https://i.ibb.co/7GsGMZ9/1640680010421-1.jpg";
 
-export default function Home({ allPostsData }) {
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
+
+export default function Banner() {
+  function myLoader() {
+    return <p> loading </p>;
+  }
   return (
-    <>
-      <div className='flex justify-between items-center text-[#CBD5F6] p-20 h-full bg-primary'>
-        <div className=''>
-          <div>
-            <h1 className='text-7xl font-bold font-mono text-[#CBD5F6] amiri'> Hello! </h1>
-            <h1 className='text-5xl font-bold font-mono text-[#CBD5F6] amiri'> This is Emrul Kayes </h1>
-            <p className='pt-3 text-xl font-semibold text-sky-400 '><Typical
-              steps={['Web Developer', 3500, 'MERN Stack Developer', 3500]}
-              loop={Infinity}
-              wrapper="p"
-            /> </p>
-            <p className='py-5 text-[#8892B0]'> I am a web developer. In the last few months I have completed more than 10+ websites project.
-              <p> I'm expert in HTML, CSS and JavaScript. As a library component I'm expert in both Bootstrap and TailwindCSS. </p>
-
-              Also expert in React js as a JavaScript framework. As a backend good at Node.js and Express.js. Also have good knowledge at Mongodb database </p>
-
-            <a href="resume.pdf" className='btn border-2 text-[#4AB9A7] font-semibold border-sky-300 normal-case hover:text-black hover:bg-sky-100' download> <i>Download Resume</i> <i className="fa-solid fa-download pl-2"></i> </a>
-
-            <h1 className='download-btn'> SASS Check </h1>
-
-          </div>
-        </div>
-        <img className='w-1/4 rounded-3xl' src="https://i.ibb.co/7GsGMZ9/1640680010421-1.jpg" alt="" />
-      </div>
-
-      {/* <button className='download-btn'> Hello SCSS/ SASS </button> */}
-    </>
+    <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={2} columns={16}>
+        <Grid item xs={8}>
+          {/* <Item>xs=8</Item> */}
+          <img src="https://i.ibb.co/7GsGMZ9/1640680010421-1.jpg" alt="" />
+        </Grid>
+        <Grid item xs={8}>
+          <Image
+          // loader={myLoader}
+          src={Profile}
+          alt="Picture of the author"
+          width={500}
+          height={500} />  
+        </Grid>
+      </Grid>
+    </Box>
   )
 }
