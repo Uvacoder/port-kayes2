@@ -1,0 +1,13 @@
+.button-basic {
+    border: 2px;
+    background-color: red;
+    margin-top: 10px;
+}
+
+$btn-color: rgb(9, 152, 30);
+
+.download-btn {
+    // @extend .button-basic;
+    background-color: $btn-color;
+    color: white !important;
+}
