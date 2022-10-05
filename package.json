@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@deadcoder0904/react-typical": "^0.1.2",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@mui/material": "^5.10.8",
@@ -26,6 +27,7 @@
   "devDependencies": {
     "@types/node": "^18.7.18",
     "@types/react": "^18.0.20",
+    "@types/react-typical": "^0.1.0",
     "autoprefixer": "^10.4.12",
     "postcss": "^8.4.16",
     "tailwindcss": "^3.1.8",
